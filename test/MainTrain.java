@@ -1,9 +1,6 @@
 package test;
-
- import test.Tile.Bag;
-
+ //import test.Tile.Bag;
  public class MainTrain {
-	
 // 	public static void testBag() {
 // 		Bag b=Tile.Bag.getBag();
 // 		Bag b1=Tile.Bag.getBag();
@@ -98,10 +95,14 @@ package test;
 
 // 	}
 
- 	public static void main(String[] args) {
+ 	public static void main(String[] args) 
+	{
 // 		testBag(); // 30 points
 // 		testBoard(); // 70 points
-		System.out.println("done");				
+		System.out.println("done2");		
+		//String inputString = java.util.Scanner.nextLine();	
+		//System.out.println("You entered: " + inputString);
+		//scanner.close();	
  	}
 
  }
