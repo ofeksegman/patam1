@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Tile {
     public final int int_score;
-    public final char char_letter;
-    private Tile(char  char_letter ,int int_score){
-        this.char_letter = char_letter;
+    public final char letter;
+    private Tile(char  letter ,int int_score){
+        this.letter = letter;
         this.int_score = int_score;
     }
     public static Tile createTile(char letter, int score) {
@@ -17,11 +17,11 @@ public class Tile {
             if (this == obj) return true;
             if (obj == null || getClass() != obj.getClass()) return false;
             Tile tile = (Tile) obj; // Cast to Tile
-            return char_letter == tile.char_letter && int_score == tile.int_score;
+            return letter == tile.letter && int_score == tile.int_score;
     }
     @Override
     public int hashCode() {
-        return Objects.hash(char_letter, int_score);
+        return Objects.hash(letter, int_score);
     }
 
     public static class Bag{
@@ -83,7 +83,7 @@ public class Tile {
 
         public void put(Tile t){
             int [] allLetters = new int[] {9, 2, 2, 4, 12, 2, 3, 2, 9, 1, 1, 4, 2, 6, 8, 2, 1, 6, 4, 6, 4, 2, 2, 1, 2, 1};
-            int index_letter= t.char_letter-'A';
+            int index_letter= t.letter-'A';
             if(this.letters[index_letter]!=allLetters[index_letter])
             {
                 this.letters[index_letter]++;
